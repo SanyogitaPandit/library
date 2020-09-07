@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html,
+body {
+    background-color: #123456;
+    background: linear-gradient(to bottom, #123456, #fff) no-repeat;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+.topnav {
+    width: 100%;
+    max-width: 1200px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px auto;
+}
+
+button,
+input[type=submit] {
+    background-color: #123456;
+    border: none;
+    color: inherit;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 1px 1px inset;
+}
+
+button:hover,
+input[type=submit]:hover {
+    box-shadow: 0px 0px 2px 2px;
+    cursor: pointer;
+}
+
+input[type=submit],
+.add_div button {
+    justify-self: center;
+}
+
+.add_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 4;
+}
+
+.add-div-content {
+    position: absolute;
+    top: 4em;
+    font-size: 1.5em;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    justify-items: flex-start;
+    gap: 1em;
+    text-align: left;
+    background-color: #123456;
+    background: linear-gradient(to bottom, #123456, #fff) no-repeat;
+    border-radius: 1em;
+    box-shadow: 0px 0px 6px 6px #081827;
+    padding: 20px;
+}
+
+.no-disp {
+    display: none;
+}
+
+.booklist {
+    display: grid;
+    justify-content: center;
+    gap: 2em;
+    grid-template-columns: repeat(4, 240px);
+    color: #123456;
+    margin: auto;
+}
+
+.booklist li {
+    min-height: 156px;
+    box-shadow: 0px 0px 3px 3px;
+    list-style: none;
+    background-color: #bed5db;
+    position: relative;
+}
+
+.cross {
+    position: absolute;
+    top: -5px;
+    right: 10px;
+    width: 16px;
+    height: 30px;
+}
+
+.cross::after {
+    content: '\d7';
+    line-height: 30px;
+    font-size: 2em;
+}
+
+.cross:hover {
+    text-shadow: 0px 0px 4px;
+}
+
+.bookdiv h3 {
+    padding-bottom: 10px;
+}
+
+.bookdiv {
+    background: url(../images/bookimg.jpg) 50%/contain no-repeat;
+    width: 100%;
+    height: 100%;
+    padding: 2em 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1150px) {
+    .booklist {
+        grid-template-columns: repeat(3, 240px);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .booklist {
+        grid-template-columns: repeat(2, 240px);
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .booklist {
+        grid-template-columns: 1fr;
+    }
+}

@@ -5,10 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Library</title>
+    <link rel="stylesheet" href="styles\style.css">
 </head>
 
-<body>
-
+<body onload="onPageLoad()">
+    <nav class="topnav">
+        <h1>Online Library</h1>
+        <button id="add_new">Add new book</button>
+    </nav>
+    <section id="add_new_section" class="no-disp">
+        <h1 style="visibility: hidden;">Add Book</h1>
+        <div id="div_content" class="add-div-content">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name">
+            <label for="author">Author</label>
+            <input type="text" name="author" id="author">
+            <label for="pages">Pages</label>
+            <input type="number" name="pages" id="pages">
+            <label for="read">Read</label>
+            <input type="checkbox" name="read" id="read">
+            <button id="cancel">Cancel</button>
+            <input id="submit" type="submit" value="Submit">
+        </div>
+    </section>
+    <section>
+        <h1 style="visibility: hidden;">Display Books</h1>
+        <ul id="booklist" class="booklist">
+        </ul>
+    </section>
+    <footer></footer>
 </body>
+<script type="text/javascript" src="scripts\script.js"></script>
 
 </html>
